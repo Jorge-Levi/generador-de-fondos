@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Fondos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Generador de Fondos</h1>
+        <div class="color-picker">
+            <input type="color" id="color1" name="color1" value="#ff0000">
+            <input type="color" id="color2" name="color2" value="#0000ff">
+        </div>
+        <div class="controls">
+            <label for="direction">Dirección del Gradiente:</label>
+            <select id="direction">
+                <option value="to right">Horizontal</option>
+                <option value="to bottom">Vertical</option>
+                <option value="to bottom right">Diagonal</option>
+            </select>
+        </div>
+        <button id="generate-btn">Generar Fondo</button>
+        <button id="download-btn">Descargar Fondo</button>
+        <div id="preview"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
