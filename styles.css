@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.color-picker input {
+    margin: 10px;
+}
+
+.controls {
+    margin: 20px 0;
+}
+
+#preview {
+    height: 200px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
