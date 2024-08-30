@@ -3,28 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generador de Fondos</title>
+    <title>Generador de Fondos - Crea y Personaliza Tus Fondos de Pantalla</title>
+    <meta name="description" content="Genera fondos de pantalla personalizados con gradientes de color. Elige tus colores favoritos, ajusta la dirección del gradiente y descarga o comparte tus creaciones en redes sociales.">
+    <meta name="keywords" content="fondos de pantalla, generador de fondos, gradientes, personalización, descargar fondos, crear fondos, diseño de fondos">
+    <meta name="author" content="Tu Nombre">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Generador de Fondos - Crea y Personaliza Tus Fondos de Pantalla">
+    <meta property="og:description" content="Genera fondos de pantalla personalizados con gradientes de color. Elige tus colores favoritos, ajusta la dirección del gradiente y descarga o comparte tus creaciones en redes sociales.">
+    <meta property="og:image" content="https://www.tusitio.com/imagen-de-ejemplo.png">
+    <meta property="og:url" content="https://www.tusitio.com/generador-de-fondos/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Generador de Fondos - Crea y Personaliza Tus Fondos de Pantalla">
+    <meta name="twitter:description" content="Genera fondos de pantalla personalizados con gradientes de color. Elige tus colores favoritos, ajusta la dirección del gradiente y descarga o comparte tus creaciones en redes sociales.">
+    <meta name="twitter:image" content="https://www.tusitio.com/imagen-de-ejemplo.png">
+
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Generador de Fondos</h1>
-        <div class="color-picker">
-            <input type="color" id="color1" name="color1" value="#ff0000">
-            <input type="color" id="color2" name="color2" value="#0000ff">
-        </div>
-        <div class="controls">
-            <label for="direction">Dirección del Gradiente:</label>
-            <select id="direction">
-                <option value="to right">Horizontal</option>
-                <option value="to bottom">Vertical</option>
-                <option value="to bottom right">Diagonal</option>
-            </select>
-        </div>
-        <button id="generate-btn">Generar Fondo</button>
-        <button id="download-btn">Descargar Fondo</button>
-        <div id="preview"></div>
-    </div>
+    <header>
+        <h1>Generador de Fondos de Pantalla</h1>
+    </header>
+    <main>
+        <section class="generator">
+            <h2>Personaliza tu Fondo de Pantalla</h2>
+            <div class="color-picker">
+                <label for="color1">Color 1:</label>
+                <input type="color" id="color1" name="color1" value="#ff0000">
+                <label for="color2">Color 2:</label>
+                <input type="color" id="color2" name="color2" value="#0000ff">
+            </div>
+            <div class="controls">
+                <label for="direction">Dirección del Gradiente:</label>
+                <select id="direction">
+                    <option value="to right">Horizontal</option>
+                    <option value="to bottom">Vertical</option>
+                    <option value="to bottom right">Diagonal</option>
+                </select>
+            </div>
+            <div class="buttons">
+                <button id="generate-btn" class="btn primary-btn">Generar Fondo</button>
+                <button id="download-btn" class="btn secondary-btn">Descargar Fondo</button>
+            </div>
+        </section>
+        <section id="preview-section">
+            <h2>Vista Previa</h2>
+            <div id="preview" aria-label="Vista previa del fondo generado"></div>
+        </section>
+        <section class="share-section">
+            <h2>Comparte tu creación</h2>
+            <div class="share-buttons">
+                <button id="share-facebook" class="btn facebook-btn">Compartir en Facebook</button>
+                <button id="share-twitter" class="btn twitter-btn">Compartir en Twitter</button>
+            </div>
+        </section>
+        <section class="history-section">
+            <h2>Historial de Gradientes</h2>
+            <div id="history-container" class="history-container"></div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Generador de Fondos. Todos los derechos reservados.</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
