@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://generadorfondos.netlify.app/sitemap.xml
